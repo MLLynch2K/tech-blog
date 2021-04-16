@@ -20,7 +20,7 @@ This is a tech blog that users can create and sign into their accounts, make pos
 
 ***
 ### Link to Deployed Site on Heroku  
-![]()   
+![](https://techblog2k.herokuapp.com/)   
 
 ***
 ### Features  
