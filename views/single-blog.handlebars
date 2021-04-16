@@ -1,0 +1,28 @@
+<div class="card">
+    <div class="card-header">
+        <apan class="card-title">{{post.title}} </span>
+        <span>({{format_date post.created_at}})</span>
+        <span class="posted-by"> (Posted by {{post.user.username}})</span>
+    </div>
+    <div class="card-body">
+      <p class="card-text">{{post.blog_text}}</p>
+    </div>
+</div>
+        <form class="comment-form">
+        <div class="input-group comment-box">
+             <span class="input-group-text">Comment</span>
+            <textarea class="form-control" aria-label="With textarea"></textarea>
+        </div>
+        </form>
+  <div class="comment-container">
+  {{#each post.comments}}
+   <div class="card comment-card">
+    <div class="card-body">
+        <p class="comment-user-date">{{user.username}} on {{created_at}}</p>
+        <p>{{comment_text}}</p>
+    </div>
+  </div>
+  {{/each}}
+  </div>
+  <script src="/javascript/comments.js"></script>
+  

@@ -1,4 +1,4 @@
-# Tecb Blog
+# Tech Blog
 This is a tech blog that users can create and sign into their accounts, make posts, and comment on existing posts. 
 
 ***

@@ -1,0 +1,40 @@
+<div class="card">
+  <div class="card-header">Create New Post</div>
+  <div class="card-body">
+    <form class="new-post-form">
+        <div class="mb-3">
+            <label for="Title" class="form-label">Title</label>
+            <input type="text" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="content" class="form-label">Content</label>
+            <textarea class="form-control" aria-label="With textarea"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary ps-3 pe-3 me-2 create-btn">create</button>
+    </form>
+  </div>
+</div>
+
+
+{{#if posts.length}}
+<div class="post-list">
+{{#if loggedIn}}
+{{#each posts}}
+<div class="card dashboard-card">
+    <div class="card-header">
+        <span class="card-title">{{title}} </span>
+        <span>({{format_date created_at}})</span>
+        <span class="posted-by"> (Posted by {{user.username}})</span>
+    </div>
+    <div class="card-body">
+      <p class="card-text">{{blog_text}}</p>
+    </div>
+  </div>
+  <div class="edit-delete-div">
+  <a href="/dashboard/edit/{{id}}" class="edit-link">Edit Post</a>
+  </div>
+  {{/each}}
+{{/if}}
+</div>
+{{/if}}
+<script src="/javascript/add-post.js"></script>

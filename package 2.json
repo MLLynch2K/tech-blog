@@ -1,0 +1,31 @@
+{
+  "name": "mvc-challenge-tech-blog",
+  "version": "1.0.0",
+  "description": "This is a tech blog that users can create and sign into their accounts, make posts, and comment on existing posts.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MLLynch2K/tech-blog"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MLLynch2K/tech-blog"
+  },
+  "homepage": "hhttps://github.com/MLLynch2K/tech-blog",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "express-session": "^1.17.1",
+    "handlebars": "^4.7.7",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.2"
+  }
+}

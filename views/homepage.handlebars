@@ -1,18 +1,22 @@
-<ol class="post-list">
-  {{#each posts as |post|}}
-  <li>
-    <article class="post">
-      <div class="title">
-        <a href="{{post.post_url}}" target="_blank">{{post.title}}</a>
-        <span>({{post.post_url}})</span>
-      </div>
-      <div class="meta">
-        {{post.vote_count}} point(s) by {{post.user.username}} on
-        {{post.created_at}}
-        |
-        <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
-      </div>
-    </article>
-  </li>
+<div class="post-list">
+{{#if loggedIn}}
+{{#each posts}}
+<div class="card">
+    <div class="card-header">
+        <a href="/posts/{{id}}"class="card-title">{{title}} </a>
+        <span>({{format_date created_at}})</span>
+    </div>
+  </div>
   {{/each}}
-</ol>
+  {{else}}
+  {{#each posts}}
+  <div class="card-header m-3">
+        <span class="card-title">{{title}} </span>
+        <span>{{format_date created_at}}</span>
+  </div>
+</div>
+{{/each}}
+{{/if}}
+</div>
+
+
